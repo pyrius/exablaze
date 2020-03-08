@@ -34,7 +34,7 @@ int main(void)
             FILE *file = fopen("rec_pkt", "w");
             int results = fputs(buf, file);
             if (results == EOF) {
-             // Failed to write do error code here
+             // Failed to write do error code here 
              printf("could not write to a file");
              }
             fclose(file);

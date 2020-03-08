@@ -55,8 +55,6 @@ int main(void)
         recv_ts_exp     =  exanic_expand_timestamp(exanic, r_timestamp);
         if (sz > 0)
         {
-            //printf("Got a valid frame\n");
-            //printf(buf);
             FILE *file = fopen("rec_pkt", "w");
             int results = fputs(buf, file);
             if (results == EOF) {
