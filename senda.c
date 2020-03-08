@@ -65,23 +65,15 @@ int main(void)
           }
      }
 
-      //exanic_cycles_t transmit_ts_exp =  exanic_expand_timestamp(exanic, t_timestamp);
-      //exanic_cycles_t recv_ts_exp     =  exanic_expand_timestamp(exanic, r_timestamp);
       exanic_cycles_t t_result = recv_ts_exp - transmit_ts_exp;
       uint64_t transmit_ts = exanic_cycles_to_ns(exanic,transmit_ts_exp);
       uint64_t receive_ts = exanic_cycles_to_ns(exanic,recv_ts_exp);
       uint64_t result = receive_ts - transmit_ts;
       uint64_t ts_result = exanic_cycles_to_ns(exanic,t_result);
-     // printf("Time taken for transmit %d, %d, %d ns",receive_ts, transmit_ts, result);
-     printf("\n");
-      //printf("%"PRIu64"\n", receive_ts);
-      //printf("%"PRIu64"\n", transmit_ts);
+      printf("\n");
+    
       printf("%"PRIu64"\n", ts_result);
-      /*
-      printf("%lu\n", receive_ts);
-      printf("%lu\n", transmit_ts);
-      printf("%lu\n", result);
-     */
+      
      exanic_release_tx_buffer(tx);
      exanic_release_rx_buffer(rx);
      exanic_release_handle(exanic);
