@@ -2,6 +2,8 @@
 #include <exanic/exanic.h>
 #include <exanic/fifo_rx.h>
 
+//checking comment 
+
 int main(void)
 {
     char *device = "exanic0";
@@ -47,3 +49,4 @@ int main(void)
     return 0;
 }
 
+//final comment
